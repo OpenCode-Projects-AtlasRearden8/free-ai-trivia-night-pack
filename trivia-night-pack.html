@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free AI Trivia Night Pack — Print &amp; Play</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.5;
+    color: #1a1a1a;
+    background: #f3f0e9;
+    margin: 0;
+    padding: 2rem 1rem;
+  }
+  .sheet {
+    max-width: 8in;
+    margin: 0 auto 2rem auto;
+    background: #ffffff;
+    padding: 0.8in 0.75in;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  h1, h2, h3 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  h1 { font-size: 1.9rem; margin: 0 0 0.25rem 0; }
+  h2 { font-size: 1.3rem; border-bottom: 3px solid #1a1a1a; padding-bottom: 0.2rem; }
+  h3 { font-size: 1.05rem; margin: 1.2rem 0 0.3rem; }
+  .kicker {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    font-size: 0.8rem; color: #555; margin: 0;
+  }
+  .meta { color: #444; font-size: 0.95rem; }
+  .cover-title { font-size: 2.4rem; margin-top: 0.4rem; }
+  .divider { border: 0; border-top: 1px solid #999; margin: 1rem 0; }
+  ol.q { padding-left: 1.4rem; margin: 0.4rem 0 0.6rem 0; }
+  ol.q > li { margin-bottom: 0.55rem; }
+  .a {
+    display: block; font-size: 0.92rem;
+    background: #efece4; padding: 0.15rem 0.45rem; border-radius: 4px;
+  }
+  .a strong { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.06em; }
+  .tips li, ul.plain li { margin-bottom: 0.45rem; }
+  ul.plain { padding-left: 1.2rem; }
+  .pagenum { text-align: center; font-size: 0.8rem; color: #666; margin-top: 1.4rem; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .sheetgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .answer-sheet { border: 2px solid #1a1a1a; padding: 0.7rem; }
+  .answer-sheet h3 { margin: 0 0 0.4rem; border-bottom: 1px solid #999; }
+  .answer-sheet .teamline { display: flex; gap: 0.4rem; align-items: baseline; margin-bottom: 0.5rem; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 0.85rem; }
+  .answer-sheet .teamline .line { flex: 1; border-bottom: 1px solid #333; height: 1.1em; }
+  .roundsrow { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.25rem 1rem; font-size: 0.85rem; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .roundsrow .roundlabel { font-weight: bold; }
+  .nums { display: grid; grid-template-columns: 1fr; row-gap: 0.9rem; margin: 0.4rem 0; }
+  .nums .numline { display: flex; gap: 0.35rem; align-items: flex-end; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 0.85rem; }
+  .nums .numline .n { min-width: 1.1em; text-align: right; }
+  .nums .numline .line { flex: 1; border-bottom: 1px solid #333; height: 1.15em; }
+  .scoreline { display: flex; gap: 0.4rem; align-items: baseline; margin-top: 0.5rem; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 0.85rem; font-weight: bold; }
+  .scoreline .line { flex: 1; border-bottom: 1px solid #333; height: 1em; }
+  .scorebox { min-width: 1.6em; border: 1.5px solid #1a1a1a; height: 1.6em; }
+  footer.creditline { margin-top: 0.9rem; font-size: 0.72rem; color: #666; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: center; border-top: 1px solid #ddd; padding-top: 0.35rem; }
+
+  @page { size: Letter; margin: 0.7in; }
+  @media print {
+    body { background: none; padding: 0; }
+    .sheet { max-width: none; margin: 0; padding: 0; box-shadow: none; page-break-after: always; }
+    .sheet:last-child { page-break-after: auto; }
+    a { color: inherit; text-decoration: none; }
+    .screen-note { display: none; }
+  }
+  .screen-note {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #1a1a1a; color: #fff; padding: 0.6rem 1rem; border-radius: 6px;
+    max-width: 8in; margin: 0 auto 1.2rem auto; font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="screen-note">
+  <strong>Printing this pack?</strong> Use your browser&rsquo;s Print button (Ctrl/Cmd&nbsp;+&nbsp;P). Each section below is
+  designed to print on its own US Letter or A4 page. Nothing here needs a screen for players &mdash; only the host
+  holds these papers.
+</div>
+
+<!-- ============ PAGE 1: COVER ============ -->
+<section class="sheet">
+  <p class="kicker">Asdale Dynamics, LLC &middot; Free Print-and-Play</p>
+  <h1 class="cover-title">The Friendly AI Trivia Night Pack</h1>
+  <p class="meta">Eight written rounds, printable answer sheets, tiebreakers, and hosting tips.<br>
+  For libraries, classrooms, book clubs, and any room with a table and a little curiosity.</p>
+  <hr class="divider">
+  <h3>What&rsquo;s inside</h3>
+  <ul class="plain">
+    <li><strong>Hosting tips</strong> &mdash; how to run a smooth night with no screens needed</li>
+    <li><strong>Round 1:</strong> Influential Moments (AI history)</li>
+    <li><strong>Round 2:</strong> Common Myths (true or false)</li>
+    <li><strong>Round 3:</strong> How It Works (plain-English terms)</li>
+    <li><strong>Round 4:</strong> Staying Safe (privacy and scams)</li>
+    <li><strong>Round 5:</strong> AI in Everyday Life</li>
+    <li><strong>Round 6:</strong> Famous Names</li>
+    <li><strong>Round 7:</strong> Pop Culture AI</li>
+    <li><strong>Round 8:</strong> The Mixed Bag</li>
+    <li><strong>Tiebreakers</strong> &mdash; three nearest-guess questions</li>
+    <li><strong>Answer sheets</strong> &mdash; print one page per team</li>
+  </ul>
+  <hr class="divider">
+  <h3>How to play (30&ndash;60 seconds)</h3>
+  <ul class="tips">
+    <li>Split players into teams of 2&ndash;6. Hand each team one <strong>answer sheet</strong> page (they can also use scrap paper).</li>
+    <li>The host reads each round&rsquo;s six questions aloud, slowly, twice. Teams write answers.</li>
+    <li>One point per correct answer. Host reads the printed answers between rounds: teams pass sheets to neighbors and score them.</li>
+    <li>Most points after eight rounds wins. If it&rsquo;s close, use the <strong>tiebreakers</strong>: nearest guess wins, no going over.</li>
+  </ul>
+  <p class="meta">Free under the MIT License &mdash; print the whole pack ten thousand times if you like.<br>
+  Created by <strong>Asdale Dynamics, LLC</strong>, explaining AI like a friend would.</p>
+  <p class="pagenum">Page 1</p>
+</section>
+
+<!-- ============ PAGE 2: HOSTING TIPS ============ -->
+<section class="sheet">
+  <h2>Hosting Tips: A Great Night with No Screens Needed</h2>
+  <p class="meta">This pack is built for libraries, classrooms, senior centers, and living rooms. Everything runs on paper
+  and one confident voice. This page is for the host &mdash; consider not photocopying it for teams.</p>
+
+  <h3>Before the night</h3>
+  <ul class="tips">
+    <li><strong>Print smart:</strong> one full pack for the host, plus one Answer Sheets page per expected team (and a few spare). A copier friendly black-and-white print works fine.</li>
+    <li><strong>Pencils over pens.</strong> Somebody will want to change an answer. Everybody always does.</li>
+    <li><strong>Set the tone early:</strong> say out loud that this night is about fun and curiosity, not homework. Wrong guesses get chuckles, not sighs.</li>
+    <li><strong>Optional:</strong> a small prize (bookmarks, candy, bragging rights on a paper certificate) works wonders for libraries and classrooms.</li>
+  </ul>
+
+  <h3>While running rounds</h3>
+  <ul class="tips">
+    <li><strong>Read each question twice</strong> and then pause. Teams grumble &ldquo;wait&rdquo; far less when they know the second read is coming.</li>
+    <li><strong>Stay in order.</strong> Announce the round name before reading; it helps teams settle and clue hunters feel clever early.</li>
+    <li><strong>Grade between rounds, not at the end.</strong> Pass sheets right, read answers aloud, collect sheets back, repeat. It keeps energy up and disputes down.</li>
+    <li><strong>Accept close answers.</strong> If a team writes &ldquo;Turing&rdquo; instead of &ldquo;Alan Turing,&rdquo; give the point. You are the referee and the vibe-keeper.</li>
+    <li><strong>Handle disputes with a rule:</strong> host decides, then everybody says &ldquo;moving on&rdquo; together. Playful, not lawyerly.</li>
+  </ul>
+
+  <h3>Notes for libraries and classrooms</h3>
+  <ul class="tips">
+    <li><strong>Accessibility:</strong> read questions clearly and at a slower pace; large-print answer sheets can be made by enlarging at the copier (the pack prints fine at 120%).</li>
+    <li><strong>Mixed ages work:</strong> rounds mix history, everyday tech, and pop culture so grandparents and teenagers can trade wins.</li>
+    <li><strong>No devices rule (optional):</strong> decide once whether phones are allowed, and say it at the start. This pack is great fully unplugged.</li>
+    <li><strong>Follow-up hooks:</strong> round answers connect to beginner-friendly AI explainers. A line like &ldquo;if you enjoyed Round 3, the library&rsquo;s beginner AI guides start even simpler&rdquo; is a nice closer.</li>
+  </ul>
+
+  <h3>Scoring at a glance</h3>
+  <ul class="plain">
+    <li>8 rounds &times; 6 questions &times; 1 point = <strong>48 possible points</strong></li>
+    <li>Tie at 48 or anywhere else? Tiebreakers are nearest-guess: closest number without going over wins (like The Price Is Right, but for 1956).</li>
+    <li>Teams can score themselves between rounds &mdash; it keeps one person out of math jail for the whole evening.</li>
+  </ul>
+  <footer class="creditline">The Friendly AI Trivia Night Pack &mdash; a freebie from Asdale Dynamics, LLC. Free to print, share, and host.</footer>
+  <p class="pagenum">Page 2</p>
+</section>
+
+<!-- ============ ROUND 1 ============ -->
+<section class="sheet">
+  <p class="kicker">Host sheet &middot; read aloud</p>
+  <h2>Round 1: Influential Moments</h2>
+  <p class="meta">The history round. Six landmark moments in AI, from a thoughtful mathematician to a chatbot that broke the internet.</p>
+  <ol class="q">
+    <li>In 1950, which British mathematician proposed the &ldquo;imitation game&rdquo; as a way to ask whether machines can think?
+      <span class="a"><strong>Answer:</strong> Alan Turing &mdash; the idea became known as the Turing Test.</span></li>
+    <li>The term &ldquo;artificial intelligence&rdquo; was coined at a famous summer workshop in 1956. At which university did it happen?
+      <span class="a"><strong>Answer:</strong> Dartmouth College &mdash; the 1956 Dartmouth workshop. Accept &ldquo;Dartmouth.&rdquo;</span></li>
+    <li>In 1997, which IBM computer defeated world chess champion Garry Kasparov?
+      <span class="a"><strong>Answer:</strong> Deep Blue.</span></li>
+    <li>A 2017 research paper titled &ldquo;Attention Is All You Need&rdquo; introduced what architecture, now the engine inside most modern chatbots?
+      <span class="a"><strong>Answer:</strong> The Transformer.</span></li>
+    <li>In 2016, which program beat Go grandmaster Lee Sedol, surprising almost everyone?
+      <span class="a"><strong>Answer:</strong> AlphaGo (made by Google DeepMind).</span></li>
+    <li>ChatGPT launched in which month of which year?
+      <span class="a"><strong>Answer:</strong> November 2022.</span></li>
+  </ol>
+  <p class="meta"><strong>Host note:</strong> for question 6, accept November of 2022 only &mdash; year alone gets the point; month and year gets applause.</p>
+  <footer class="creditline">The Friendly AI Trivia Night Pack &mdash; Asdale Dynamics, LLC &middot; round 1 of 8</footer>
+  <p class="pagenum">Page 3</p>
+</section>
+
+<!-- ============ ROUND 2 ============ -->
+<section class="sheet">
+  <p class="kicker">Host sheet &middot; read aloud</p>
+  <h2>Round 2: Common Myths &mdash; True or False?</h2>
+  <p class="meta">Read each statement. Teams write &ldquo;True&rdquo; or &ldquo;False.&rdquo; After reading the answer, feel free to add the one-line reason.</p>
+  <ol class="q" style="list-style-type: upper-alpha;">
+    <li><strong>True or False:</strong> AI chatbots understand language the same way humans do.
+      <span class="a"><strong>Answer:</strong> False &mdash; they predict likely words based on patterns in their training data. Clever, but not human understanding.</span></li>
+    <li><strong>True or False:</strong> When a chatbot sounds confident, its answer is more likely to be right.
+      <span class="a"><strong>Answer:</strong> False &mdash; chatbots can be confidently wrong. Confidence and accuracy are separate dials.</span></li>
+    <li><strong>True or False:</strong> A chatbot learns from your conversation in real time and updates itself live as you chat.
+      <span class="a"><strong>Answer:</strong> False &mdash; the model is trained beforehand. It doesn&rsquo;t &ldquo;learn&rdquo; from tonight&rsquo;s chat live.</span></li>
+    <li><strong>True or False:</strong> AI chatbots are conscious and have feelings.
+      <span class="a"><strong>Answer:</strong> False &mdash; there is no evidence AI is conscious. A chatbot can write passionately about coffee without having tasted any.</span></li>
+    <li><strong>True or False:</strong> Every AI tool can see images and hear audio by default.
+      <span class="a"><strong>Answer:</strong> False &mdash; many AI tools only handle text. Multimodal ones exist, but text-only is still common.</span></li>
+    <li><strong>True or False:</strong> A chatbot making something up &mdash; stating it as fact &mdash; has a name in the AI world.
+      <span class="a"><strong>Answer:</strong> True &mdash; it&rsquo;s called a &ldquo;hallucination&rdquo;: a confident, made-up answer.</span></li>
+  </ol>
+  <footer class="creditline">The Friendly AI Trivia Night Pack &mdash; Asdale Dynamics, LLC &middot; round 2 of 8</footer>
+  <p class="pagenum">Page 4</p>
+</section>
+
+<!-- ============ ROUND 3 ============ -->
+<section class="sheet">
+  <p class="kicker">Host sheet &middot; read aloud</p>
+  <h2>Round 3: How It Works</h2>
+  <p class="meta">Plain-English questions about what AI actually does under the hood. No engineering degree required, as promised.</p>
+  <ol class="q">
+    <li>The instruction or question you type to an AI tool has a specific two-syllable name. What is it?
+      <span class="a"><strong>Answer:</strong> A prompt.</span></li>
+    <li>When an AI chatbot confidently gives a false or entirely invented answer, it&rsquo;s said to be doing what?
+      <span class="a"><strong>Answer:</strong> Hallucinating (the answer is called a hallucination).</span></li>
+    <li>When your phone suggests your next word as you type a message, it&rsquo;s using the same core trick as large chatbots. What is that trick?
+      <span class="a"><strong>Answer:</strong> Predicting the next word.</span></li>
+    <li>What do we call the examples a model is built from &mdash; the books, articles, and web pages it learned patterns from?
+      <span class="a"><strong>Answer:</strong> Training data (the model is trained on it).</span></li>
+    <li>The word &ldquo;GPT&rdquo; in ChatGPT is an abbreviation. Name any two of the three words it stands for.
+      <span class="a"><strong>Answer:</strong> Generative Pre-trained Transformer &mdash; any two of the three earns a point.</span></li>
+    <li>Many phones unlock just by looking at you. What kind of AI makes that possible?
+      <span class="a"><strong>Answer:</strong> Face recognition (computer vision).</span></li>
+  </ol>
+  <footer class="creditline">The Friendly AI Trivia Night Pack &mdash; Asdale Dynamics, LLC &middot; round 3 of 8</footer>
+  <p class="pagenum">Page 5</p>
+</section>
+
+<!-- ============ ROUND 4 ============ -->
+<section class="sheet">
+  <p class="kicker">Host sheet &middot; read aloud</p>
+  <h2>Round 4: Staying Safe</h2>
+  <p class="meta">This round quietly teaches something useful. All six answers are habits that protect real people and real money.</p>
+  <ol class="q">
+    <li>Highly realistic faked photos, videos, or voices are commonly called what?
+      <span class="a"><strong>Answer:</strong> Deepfakes.</span></li>
+    <li>Voice-cloning scammers can produce a passable copy of someone&rsquo;s voice from roughly how much audio &mdash; minutes, or just a few seconds?
+      <span class="a"><strong>Answer:</strong> A few seconds.</span></li>
+    <li>Scam phone calls now often use cloned voices and fake urgency. What&rsquo;s one safe habit to stop it cold?
+      <span class="a"><strong>Answer:</strong> Hang up and call the person back on a number you know / verify through a separate channel. (Accept: set a family code word.)</span></li>
+    <li>What kind of information should you <strong>never</strong> type into a public AI chatbot?
+      <span class="a"><strong>Answer:</strong> Personal or sensitive information &mdash; passwords, Social Security numbers, bank or medical details. (Accept sensible examples.)</span></li>
+    <li>Fake emails and texts that try to trick you into clicking links or handing over logins have an old name &mdash; what is it?
+      <span class="a"><strong>Answer:</strong> Phishing.</span></li>
+    <li>When an AI offers to &ldquo;verify&rdquo; who you are by asking for personal details in chat, what should you do first?
+      <span class="a"><strong>Answer:</strong> Be suspicious &mdash; verify through an official channel before sharing anything (or simply don&rsquo;t share). (Accept: refuse/close the chat.)</span></li>
+  </ol>
+  <p class="meta"><strong>Host note:</strong> this round is intentionally &ldquo;answers may vary&rdquo; on 3 and 6. The takeaway sentence works every time: <em>slow down, verify separately, share less.</em></p>
+  <footer class="creditline">The Friendly AI Trivia Night Pack &mdash; Asdale Dynamics, LLC &middot; round 4 of 8</footer>
+  <p class="pagenum">Page 6</p>
+</section>
+
+<!-- ============ ROUND 5 ============ -->
+<section class="sheet">
+  <p class="kicker">Host sheet &middot; read aloud</p>
+  <h2>Round 5: AI in Everyday Life</h2>
+  <p class="meta">Spoiler: everyone in the room has used AI today. These questions prove it.</p>
+  <ol class="q">
+    <li>Which typing feature quietly fixes your typos as you text?
+      <span class="a"><strong>Answer:</strong> Autocorrect.</span></li>
+    <li>&ldquo;Recommended for you&rdquo; rows on Netflix or YouTube come from what kind of AI?
+      <span class="a"><strong>Answer:</strong> Recommendation AI (recommender algorithms).</span></li>
+    <li>Your maps app reroutes you around traffic. What is it doing under the hood?
+      <span class="a"><strong>Answer:</strong> Using AI/live prediction on real-time traffic data (accept: prediction).</span></li>
+    <li>Which device listens for &ldquo;Hey Alexa&rdquo; or &ldquo;Hey Google&rdquo; in your kitchen?
+      <span class="a"><strong>Answer:</strong> A smart speaker (voice assistant).</span></li>
+    <li>What silently decides, before you even open your email, which messages go to spam?
+      <span class="a"><strong>Answer:</strong> A spam filter (machine-learning-based).</span></li>
+    <li>At self-checkout, what kind of AI identifies a yellow item between a lemon and an onion?
+      <span class="a"><strong>Answer:</strong> Computer vision.</span></li>
+  </ol>
+  <footer class="creditline">The Friendly AI Trivia Night Pack &mdash; Asdale Dynamics, LLC &middot; round 5 of 8</footer>
+  <p class="pagenum">Page 7</p>
+</section>
+
+<!-- ============ ROUND 6 ============ -->
+<section class="sheet">
+  <p class="kicker">Host sheet &middot; read aloud</p>
+  <h2>Round 6: Famous Names</h2>
+  <p class="meta">Real-world AI players. Match the maker to the machine and name the company.</p>
+  <ol class="q">
+    <li>Which company makes ChatGPT?
+      <span class="a"><strong>Answer:</strong> OpenAI.</span></li>
+    <li>Which company makes the Claude chatbot?
+      <span class="a"><strong>Answer:</strong> Anthropic.</span></li>
+    <li>Google&rsquo;s chatbot was called Bard until 2024. What is it called now?
+      <span class="a"><strong>Answer:</strong> Gemini.</span></li>
+    <li>Which company&rsquo;s AI assistant is named Copilot, found in Windows and Microsoft 365?
+      <span class="a"><strong>Answer:</strong> Microsoft.</span></li>
+    <li>Which large language model family from Meta is named after a South American animal &mdash; a cousin of the camel?
+      <span class="a"><strong>Answer:</strong> Llama (LLaMA).</span></li>
+    <li>In 2023, Elon Musk founded his own AI company to build a chatbot named Grok. What is that company called?
+      <span class="a"><strong>Answer:</strong> xAI.</span></li>
+  </ol>
+  <footer class="creditline">The Friendly AI Trivia Night Pack &mdash; Asdale Dynamics, LLC &middot; round 6 of 8</footer>
+  <p class="pagenum">Page 8</p>
+</section>
+
+<!-- ============ ROUND 7 ============ -->
+<section class="sheet">
+  <p class="kicker">Host sheet &middot; read aloud</p>
+  <h2>Round 7: Pop Culture AI</h2>
+  <p class="meta">Movies and shows shaped how the world imagines AI &mdash; usually as a villain with excellent posture.</p>
+  <ol class="q">
+    <li>&ldquo;I&rsquo;m sorry, Dave. I&rsquo;m afraid I can&rsquo;t do that.&rdquo; Which calm, red-eyed computer said it in the 1968 film <em>2001: A Space Odyssey</em>?
+      <span class="a"><strong>Answer:</strong> HAL 9000.</span></li>
+    <li>Which 1999 movie imagines humanity living unknowingly inside a simulated world, offered a red pill to escape?
+      <span class="a"><strong>Answer:</strong> The Matrix.</span></li>
+    <li>Which gentle robot&rsquo;s day job was compacting trash on an abandoned Earth, in a 2008 Pixar film?
+      <span class="a"><strong>Answer:</strong> WALL&middot;E.</span></li>
+    <li>&ldquo;I&rsquo;ll be back.&rdquo; Which 1984 film features a killer robot sent from the future?
+      <span class="a"><strong>Answer:</strong> The Terminator.</span></li>
+    <li>In <em>Star Trek: The Next Generation</em>, what&rsquo;s the name of the beloved android officer?
+      <span class="a"><strong>Answer:</strong> Data.</span></li>
+    <li>In 2011, which IBM system won <em>Jeopardy!</em> against champions Ken Jennings and Brad Rutter?
+      <span class="a"><strong>Answer:</strong> IBM Watson.</span></li>
+  </ol>
+  <footer class="creditline">The Friendly AI Trivia Night Pack &mdash; Asdale Dynamics, LLC &middot; round 7 of 8</footer>
+  <p class="pagenum">Page 9</p>
+</section>
+
+<!-- ============ ROUND 8 ============ -->
+<section class="sheet">
+  <p class="kicker">Host sheet &middot; read aloud</p>
+  <h2>Round 8: The Mixed Bag</h2>
+  <p class="meta">A pinch of everything to finish the night. Whoever leads after this round either earned it or got lucky &mdash; both count.</p>
+  <ol class="q">
+    <li>What three-letter abbreviation stands for &ldquo;Artificial Intelligence&rdquo;?
+      <span class="a"><strong>Answer:</strong> AI.</span></li>
+    <li>&ldquo;AGI&rdquo; is shorthand in the AI world for a hypothetical AI that can do virtually any intellectual task a person can. What does AGI stand for?
+      <span class="a"><strong>Answer:</strong> Artificial General Intelligence.</span></li>
+    <li>What do we call a program you can have a conversation with by typing or talking?
+      <span class="a"><strong>Answer:</strong> A chatbot. (Accept: conversational agent.)</span></li>
+    <li>What does it mean for an AI model to be &ldquo;open-source&rdquo; or openly downloadable?
+      <span class="a"><strong>Answer:</strong> Its files are shared publicly so anyone can download and run it themselves (often under a free license).</span></li>
+    <li>Most big chatbots let you use them for free, with paid upgrades available. What is that payment model commonly called?
+      <span class="a"><strong>Answer:</strong> Freemium (free tier + paid/premium subscription).</span></li>
+    <li>Fittingly, the final question: before answering a trivia question, a smart team might double-check with a second source. What everyday skill is that an example of when AI is involved?
+      <span class="a"><strong>Answer:</strong> Verifying AI answers (fact-checking / not trusting a single source). Accept any answer that says checking.</span></li>
+  </ol>
+  <footer class="creditline">The Friendly AI Trivia Night Pack &mdash; Asdale Dynamics, LLC &middot; round 8 of 8</footer>
+  <p class="pagenum">Page 10</p>
+</section>
+
+<!-- ============ TIEBREAKERS ============ -->
+<section class="sheet">
+  <p class="kicker">Host sheet &middot; only if needed</p>
+  <h2>Tiebreakers</h2>
+  <p class="meta"><strong>How to run them:</strong> each team writes a single number on the back of their answer sheet. Closest guess <em>without going over</em> wins the round. If everyone busts, the closest overall wins. Ask one at a time; stop when the tie breaks.</p>
+  <ol class="q">
+    <li>The word &ldquo;robot&rdquo; first appeared in a 1920 play by Karel Čapek. In what year? (Teams write a year; nearest without going over wins.)
+      <span class="a"><strong>Answer:</strong> 1920.</span></li>
+    <li>The Dartmouth workshop that coined &ldquo;artificial intelligence&rdquo; happened in a single summer. What year was it? (Nearest without going over wins.)
+      <span class="a"><strong>Answer:</strong> 1956.</span></li>
+    <li>In the 1997 six-game rematch between IBM&rsquo;s Deep Blue and Garry Kasparov, how many of the six games ended in a draw? (Nearest without going over wins.)
+      <span class="a"><strong>Answer:</strong> 3.</span></li>
+  </ol>
+  <p class="meta"><strong>Sudden-death backup:</strong> ask teams to guess the number of questions in this pack (48 regular, 3 tiebreakers). Nearest without going over wins. Or award the win to the team that can say &ldquo;hallucination&rdquo; with the most confidence. It&rsquo;s on brand.</p>
+  <footer class="creditline">The Friendly AI Trivia Night Pack &mdash; Asdale Dynamics, LLC &middot; tiebreakers</footer>
+  <p class="pagenum">Page 11</p>
+</section>
+
+<!-- ============ ANSWER SHEETS (print one per team) ============ -->
+<section class="sheet">
+  <p class="kicker">Print one page per team</p>
+  <h2>Team Answer Sheets</h2>
+  <div class="sheetgrid">
+    <div class="answer-sheet">
+      <h3>Team A</h3>
+      <div class="teamline"><span>Team name:</span><span class="line"></span></div>
+      <div class="roundsrow">
+        <span><span class="roundlabel">R1</span> 1__ 2__ 3__ 4__ 5__ 6__</span>
+        <span><span class="roundlabel">R5</span> 1__ 2__ 3__ 4__ 5__ 6__</span>
+        <span><span class="roundlabel">R2</span> 1__ 2__ 3__ 4__ 5__ 6__</span>
+        <span><span class="roundlabel">R6</span> 1__ 2__ 3__ 4__ 5__ 6__</span>
+        <span><span class="roundlabel">R3</span> 1__ 2__ 3__ 4__ 5__ 6__</span>
+        <span><span class="roundlabel">R7</span> 1__ 2__ 3__ 4__ 5__ 6__</span>
+        <span><span class="roundlabel">R4</span> 1__ 2__ 3__ 4__ 5__ 6__</span>
+        <span><span class="roundlabel">R8</span> 1__ 2__ 3__ 4__ 5__ 6__</span>
+      </div>
+      <div class="scoreline"><span>Total points:</span><span class="scorebox"></span></div>
+    </div>
+    <div class="answer-sheet">
+      <h3>Team B</h3>
+      <div class="teamline"><span>Team name:</span><span class="line"></span></div>
+      <div class="roundsrow">
+        <span><span class="roundlabel">R1</span> 1__ 2__ 3__ 4__ 5__ 6__</span>
+        <span><span class="roundlabel">R5</span> 1__ 2__ 3__ 4__ 5__ 6__</span>
+        <span><span class="roundlabel">R2</span> 1__ 2__ 3__ 4__ 5__ 6__</span>
+        <span><span class="roundlabel">R6</span> 1__ 2__ 3__ 4__ 5__ 6__</span>
+        <span><span class="roundlabel">R3</span> 1__ 2__ 3__ 4__ 5__ 6__</span>
+        <span><span class="roundlabel">R7</span> 1__ 2__ 3__ 4__ 5__ 6__</span>
+        <span><span class="roundlabel">R4</span> 1__ 2__ 3__ 4__ 5__ 6__</span>
+        <span><span class="roundlabel">R8</span> 1__ 2__ 3__ 4__ 5__ 6__</span>
+      </div>
+      <div class="scoreline"><span>Total points:</span><span class="scorebox"></span></div>
+    </div>
+  </div>
+  <p class="meta" style="margin-top:0.8rem;">Prefer big handwriting? Just number a blank sheet of paper 1&ndash;6 for the round you&rsquo;re on. This page is the tidy version.</p>
+  <hr class="divider">
+  <div class="sheetgrid">
+    <div class="answer-sheet">
+      <h3>Team C</h3>
+      <div class="teamline"><span>Team name:</span><span class="line"></span></div>
+      <div class="nums">
+        <div class="numline"><span class="n">1.</span><span class="line"></span></div>
+        <div class="numline"><span class="n">2.</span><span class="line"></span></div>
+        <div class="numline"><span class="n">3.</span><span class="line"></span></div>
+        <div class="numline"><span class="n">4.</span><span class="line"></span></div>
+        <div class="numline"><span class="n">5.</span><span class="line"></span></div>
+        <div class="numline"><span class="n">6.</span><span class="line"></span></div>
+      </div>
+      <div class="scoreline"><span>Points:</span><span class="scorebox"></span><span class="line"></span></div>
+    </div>
+    <div class="answer-sheet">
+      <h3>Team D</h3>
+      <div class="teamline"><span>Team name:</span><span class="line"></span></div>
+      <div class="nums">
+        <div class="numline"><span class="n">1.</span><span class="line"></span></div>
+        <div class="numline"><span class="n">2.</span><span class="line"></span></div>
+        <div class="numline"><span class="n">3.</span><span class="line"></span></div>
+        <div class="numline"><span class="n">4.</span><span class="line"></span></div>
+        <div class="numline"><span class="n">5.</span><span class="line"></span></div>
+        <div class="numline"><span class="n">6.</span><span class="line"></span></div>
+      </div>
+      <div class="scoreline"><span>Points:</span><span class="scorebox"></span><span class="line"></span></div>
+    </div>
+  </div>
+  <p class="meta" style="margin-top:0.8rem;">Teams C and D write their answer for each round inside one grid room. Assignment: write &ldquo;R1&rdquo; through &ldquo;R8&rdquo; down the side, six numbered lines each time. Photocopy as needed.</p>
+  <footer class="creditline">The Friendly AI Trivia Night Pack &mdash; Asdale Dynamics, LLC &middot; answer sheets</footer>
+  <p class="pagenum">Page 12</p>
+</section>
+
+</body>
+</html>
